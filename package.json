@@ -12,5 +12,12 @@
     "express": "^4.13.4",
     "morgan": "^1.7.0",
     "socket.io": "^1.4.6"
+  },
+  "devDependencies": {
+    "angular": "^1.5.7",
+    "bootstrap-material-design": "^0.5.10",
+    "css-loader": "^0.23.1",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.1"
   }
 }

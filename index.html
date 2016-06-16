@@ -4,18 +4,6 @@
     <meta charset="UTF-8">
     <title>Title of the document</title>
   </head>
-
-  <body>
-    Content of the document......
-  </body>
-
-  <script src="/socket.io/socket.io.js"></script>
-  <script>
-    var socket = io.connect('http://localhost:9000');
-    socket.on('news', function (data) {
-      console.log(data);
-      socket.emit('my other event', { my: 'data' });
-    });
-  </script>
+  <body></body>
+  <script type="text/javascript" src="bundle.js" charset="utf-8"></script>
 </html>
-
