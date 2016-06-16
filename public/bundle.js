@@ -44,24 +44,9 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(1)
-	__webpack_require__(5)
-	__webpack_require__(6)
-
+	__webpack_require__(56)
+	__webpack_require__(57)
 	document.write(__webpack_require__(8))
-
-
-
-	const socket = __webpack_require__(9)('http://localhost:9000');
-	socket.on('news', function (data) {
-	  console.log(data);
-	  socket.emit('my other event', { my: 'data' });
-	});
-
-	socket.on('connect', function(){});
-	socket.on('event', function(data){});
-	socket.on('disconnect', function(){});
-
 
 
 /***/ },
@@ -99,7 +84,7 @@
 
 
 	// module
-	exports.push([module.id, "body {\n    background: green;\n}\n", ""]);
+	exports.push([module.id, "body { }\n", ""]);
 
 	// exports
 
@@ -39360,6 +39345,45 @@
 	  this.jitter = jitter;
 	};
 
+
+
+/***/ },
+/* 56 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(5)
+	__webpack_require__(6)
+
+	__webpack_require__(1)
+
+	angular.module('myApp', ['ui.router'])
+	.config(($stateProvider, $urlRouterProvider) => {
+	  $urlRouterProvider.otherwise('/');
+	})
+
+
+/***/ },
+/* 57 */
+/***/ function(module, exports, __webpack_require__) {
+
+	const socket = __webpack_require__(9)('http://localhost:9000');
+
+	socket.on('news', function (data) {
+	  console.log('news', data);
+	  socket.emit('my other event', { my: 'data' });
+	});
+
+	socket.on('connect', function(){
+	  console.log('connect!');
+	});
+
+	socket.on('event', function(data){
+	  console.log('event', {data: data});
+	});
+
+	socket.on('disconnect', function(){
+	  console.log('disconnect', {data: data});
+	});
 
 
 /***/ }
