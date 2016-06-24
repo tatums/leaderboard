@@ -1,7 +1,9 @@
 const socket = require('socket.io-client')('http://localhost:9000');
 
 socket.on('news', function (data) {
-  console.log('news', data);
+  const d  =  JSON.parse(data)
+  console.log(d.hello);
+  console.log('client is processing news', data);
   socket.emit('my other event', { my: 'data' });
 });
 
@@ -16,3 +18,4 @@ socket.on('event', function(data){
 socket.on('disconnect', function(){
   console.log('disconnect', {data: data});
 });
+
