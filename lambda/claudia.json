@@ -1,0 +1,11 @@
+{
+  "lambda": {
+    "role": "leaderboard-executor",
+    "name": "leaderboard",
+    "region": "us-east-1"
+  },
+  "api": {
+    "id": "edbg7km4jj",
+    "module": "index"
+  }
+}

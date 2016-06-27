@@ -1,0 +1,9 @@
+
+
+## ENV vars
+
+```
+LDAP_HOST
+LDAP_USERNAME
+LDAP_PASSWORD
+```
